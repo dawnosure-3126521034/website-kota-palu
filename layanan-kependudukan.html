@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Layanan Kependudukan | Pemerintah Kota Palu</title>
+  <style>
+    :root { --navy:#102944; --blue:#1762c5; --ink:#26384e; --muted:#758397; --page:#f4f7fb; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:var(--page); font:14px/1.55 Arial, sans-serif; }
+    .hero { min-height:205px; padding:26px max(5vw,24px) 38px; background:linear-gradient(180deg,rgba(17,44,35,.22),rgba(244,247,251,.98)), url('') center/cover, #718575; }
+    .site-header { max-width:1120px; min-height:48px; margin:0 auto 30px; padding:7px 14px; display:flex; align-items:center; gap:28px; background:#fff; border-radius:28px; box-shadow:0 5px 18px #10294420; }
+    .brand { display:flex; align-items:center; gap:10px; min-width:175px; text-decoration:none; color:var(--ink); }
+    .crest { width:25px; height:29px; display:grid; place-items:center; border-radius:6px 6px 10px 10px; color:#fff; background:linear-gradient(135deg,#1870be 0 45%,#e7c742 45% 62%,#158448 62%); font-size:13px; }
+    .brand small { display:block; font-size:8px; line-height:1.2; color:var(--muted); }
+    .brand strong { font-size:12px; }
+    nav { display:flex; flex:1; align-items:center; justify-content:center; gap:25px; }
+    nav a { color:#45556a; text-decoration:none; font-size:11px; }
+    nav a.active { padding:7px 13px; border-radius:18px; color:var(--blue); background:#e6eef9; }
+    .search { width:220px; padding:8px 12px; border:0; border-radius:20px; background:#f0f1f3; font-size:11px; }
+    main { max-width:1120px; margin:-4px auto 48px; padding:0 24px; }
+    .intro { padding:18px 20px; margin-bottom:30px; background:white; border-radius:16px; box-shadow:0 8px 20px #172b4518; }
+    .crumb { margin:0 0 5px; color:var(--muted); font-size:11px; }
+    .crumb a { color:var(--blue); text-decoration:none; }
+    h1 { margin:0 0 5px; font-size:25px; line-height:1.25; }
+    .intro p { margin:0 0 8px; color:var(--muted); font-size:11px; }
+    .intro .hint { margin:0; }
+    .service-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+    .service-card { min-height:105px; padding:16px; background:#fff; border-radius:16px; box-shadow:0 5px 14px #172b4512; }
+    .service-card h2 { margin:0 0 5px; font-size:14px; }
+    .service-card p { margin:0 0 7px; color:var(--muted); font-size:11px; }
+    .service-card a { color:var(--blue); font-size:11px; font-weight:600; text-decoration:none; }
+    .help { margin-top:30px; padding:15px 16px; border-radius:12px; background:#e8f1ff; }
+    .help h2 { margin:0 0 3px; font-size:14px; }
+    .help p { margin:0; color:var(--muted); font-size:11px; }
+    footer { color:#d4deea; background:var(--navy); }
+    .footer-inner { max-width:1120px; margin:auto; padding:32px 24px 14px; }
+    .footer-columns { display:grid; grid-template-columns:1.2fr 1fr 1fr 1.1fr; gap:40px; padding-bottom:28px; }
+    .footer-brand { display:flex; align-items:center; gap:10px; margin-bottom:10px; color:#fff; }
+    .footer-brand strong { display:block; font-size:16px; }
+    .footer-brand small { display:block; font-size:9px; }
+    footer h2 { margin:4px 0 12px; color:#fff; font-size:12px; }
+    footer p, footer a { color:#d4deea; font-size:10px; }
+    footer p { margin:0 0 8px; }
+    footer a { display:block; margin:0 0 7px; text-decoration:none; }
+    .socials { display:flex; gap:7px; margin:10px 0; }
+    .socials a { width:28px; height:28px; margin:0; display:grid; place-items:center; border-radius:7px; background:#294765; font-weight:bold; }
+    .footer-bottom { display:flex; justify-content:space-between; gap:20px; padding:12px 0; border-top:1px solid #ffffff45; font-size:9px; }
+    .footer-bottom a { display:inline; margin-left:12px; font-size:9px; }
+    @media (max-width:760px) { .site-header { flex-wrap:wrap; gap:10px; border-radius:18px; } nav { order:3; flex-basis:100%; justify-content:space-between; gap:8px; } .brand { flex:1; } .search { width:min(40%,220px); } .footer-columns { grid-template-columns:repeat(2,minmax(0,1fr)); gap:26px; } }
+    @media (max-width:520px) { .hero { padding:16px 14px 30px; } main { padding:0 14px; } .service-grid { grid-template-columns:1fr; } h1 { font-size:22px; } .footer-columns { grid-template-columns:1fr; gap:20px; } .footer-bottom { flex-direction:column; gap:5px; } }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <header class="site-header">
+      <a class="brand" href="#beranda" aria-label="Pemerintah Kota Palu, Beranda">
+        <span class="crest" aria-hidden="true">✦</span>
+        <span><small>PEMERINTAH</small><strong>Kota Palu</strong></span>
+      </a>
+      <nav aria-label="Navigasi utama">
+        <a href="#beranda">Beranda</a><a href="#profil">Profil⌄</a><a class="active" href="#layanan">Layanan</a><a href="#informasi">Informasi⌄</a><a href="#berita">Berita</a>
+      </nav>
+      <input class="search" type="search" aria-label="Pencarian" placeholder="⌕  Pencarian...">
+    </header>
+  </div>
+  <main id="layanan">
+    <section class="intro" aria-labelledby="page-title">
+      <p class="crumb"><a href="#beranda">Beranda</a> / Kependudukan</p>
+      <h1 id="page-title">Layanan Kependudukan</h1>
+      <p>Temukan informasi dokumen kependudukan dan lanjutkan ke kanal pelayanan resmi.</p>
+      <p class="hint">Pilih layanan yang Anda butuhkan</p>
+    </section>
+    <section class="service-grid" aria-label="Daftar layanan kependudukan">
+      <article class="service-card"><h2>KTP elektronik (KTP-el)</h2><p>Informasi pengurusan identitas penduduk.</p><a href="#informasi-ktp">Lihat informasi layanan →</a></article>
+      <article class="service-card"><h2>Kartu Keluarga (KK)</h2><p>Informasi dokumen susunan dan hubungan keluarga.</p><a href="#dukcapil-kk">Kunjungi portal Dukcapil ↗</a></article>
+      <article class="service-card"><h2>Akta kelahiran dan kematian</h2><p>Informasi pencatatan peristiwa penting penduduk.</p><a href="#dukcapil-akta">Kunjungi portal Dukcapil ↗</a></article>
+      <article class="service-card"><h2>Perpindahan penduduk</h2><p>Informasi administrasi pindah dan datang.</p><a href="#dukcapil-pindah">Kunjungi portal Dukcapil ↗</a></article>
+      <article class="service-card"><h2>Kartu Identitas Anak (KIA)</h2><p>Informasi dokumen identitas bagi anak.</p><a href="#dukcapil-kia">Kunjungi portal Dukcapil ↗</a></article>
+    </section>
+    <aside class="help"><h2>Butuh bantuan memilih layanan?</h2><p>Periksa informasi dan kontak terbaru melalui kanal resmi Dukcapil Kota Palu.</p></aside>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-columns">
+        <section><div class="footer-brand"><span class="crest" aria-hidden="true">✦</span><span><small>PEMERINTAH</small><strong>Kota Palu</strong></span></div><p>Portal pelayanan dan informasi publik Pemerintah Kota Palu.</p><p>Jl. Balai Kota No. 1, Tanamodindi<br> Mantikulore, Kota Palu, Sulawesi Tengah</p><p>Darurat: 112 &nbsp;•&nbsp; palukota.go.id</p></section>
+        <section><h2>Layanan digital</h2><a href="#dokumen">Dokumen kependudukan</a><a href="#perizinan">Perizinan e-SIGA</a><a href="#ppid">Informasi publik / PPID</a><a href="#hukum">Produk hukum / JDIH</a><a href="#pengaduan">Pengaduan masyarakat</a></section>
+        <section><h2>Portal terintegrasi</h2><a href="#indonesia">Pemerintah Indonesia</a><a href="#sulteng">Provinsi Sulawesi Tengah</a><a href="#lapor">SP4N-LAPOR</a><a href="#bps">BPS Kota Palu</a></section>
+        <section><h2>Terhubung dengan kami</h2><p>Ikuti informasi dan kegiatan<br>Kota Palu melalui media sosial.</p><div class="socials"><a href="#instagram" aria-label="Instagram">◎</a><a href="#facebook" aria-label="Facebook">f</a><a href="#youtube" aria-label="YouTube">▶</a><a href="#x" aria-label="X">X</a></div><p>Instagram &nbsp;•&nbsp; Facebook &nbsp;•&nbsp; YouTube &nbsp;•&nbsp; X</p></section>
+      </div>
+      <div class="footer-bottom"><span>© Pemerintah Kota Palu. Dikelola oleh Diskominfo Kota Palu.</span><span><a href="#privasi">Privasi</a><a href="#ketentuan">Ketentuan</a><a href="#peta">Peta situs</a></span></div>
+    </div>
+  </footer>
+</body>
+</html>
